@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <main>
+            <section class="blog">
+                <article>
+
+                    <h2>Post Title 1</h2>
+                    <p> content of First user post.</p>
+                    <img src = "images/naruto.jpg" alt = "sasuke sensai " height = "200px" width = "200px" >
+                    <section class="blog" id="blog-posts">
+                        <!-- Blog posts will be dynamically added here -->
+                    </section>
+
+                    <!-- Add Post Form -->
+                    <form id="add-post-form" action="/addPost" method="POST" enctype="multipart/form-data">
+                        <input type="text" name="title" placeholder="Heading" required>
+                        <textarea name="content" placeholder="Content-Deliver" required></textarea>
+                        <input type="file" name="image" accept="image/*"> <!-- Input field for uploading images -->
+                        <button type="submit">Add Post</button>
+                    </form>
+
+                    <br/>
+                    <a href="/post/1 ">Read more...</a>
+                </article>
+
+                <article>
+                    <h2>Post Title 2</h2>
+                    <p> content of Second user post.</p>
+                    <img src = "images/naruto.jpg" alt = "naruto sensai " height = "200px" >
+
+                    <section class="blog" id="blog-posts">
+                        <!-- Blog posts will be dynamically added here -->
+                    </section>
+            
+                    <!-- Add Post Form -->
+                    <form id="add-post-form" action="/addPost" method="POST" enctype="multipart/form-data">
+                        <input type="text" name="title" placeholder="Heading" required>
+                        <textarea name="content" placeholder="Content-Deliver" required></textarea>
+                        <input type="file" name="image" accept="image/*"> 
+                        <button type="submit">Add Post</button>
+                    </form>
+
+                    <br/>
+                    <a href="/post/2">Read more...</a>
+
+                </article>
+            </section>
+        </main>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="server.js" charset="utf-8"></script>
+</body>
+</html>
