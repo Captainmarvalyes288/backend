@@ -1,0 +1,16 @@
+<%- include("header.ejs") %>
+
+<!-- Display Posts -->
+<section id="blog-posts">
+    <% posts.forEach(post => { %>
+        <article>
+            <h2><%= post.title %></h2>
+            <p><%= post.content %></p>
+            <img src="<%= post.image %>" alt="Post Image" /> 
+            <a href="/delete/<%= post.id %>">Delete Post</a>
+        </article>
+    <% }); %>
+</section>
+
+<script src="server.js" charset="utf-8"></script>
+<%- include("footer.ejs") %>
